@@ -1,6 +1,3 @@
-# Welcome to GitHub Desktop!
+# Compiler project : Ada to  Java bytecode
 
-This is your README. READMEs are where you can communicate what your project is and how to use it.
-
-Write your name on line 6, save it, and then head back to GitHub Desktop.
-maomao726
+This project is to build an easy compiler, which can compile an ada text file to an executable java bytecode file.
