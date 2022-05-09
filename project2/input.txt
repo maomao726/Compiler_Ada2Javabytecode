@@ -1,0 +1,71 @@
+{ This test program demonstrates what this scanner
+  can do.
+   }
+
+program test
+
+-- global variables
+declare
+  a: constant := 8;	--variable declaration
+  b: string := "testing variable.";
+  tesst := "test";
+  c: boolean;
+  d: float := 17.5;
+  e: integer [3];
+
+{These declaration should work}
+
+-- iterative function
+procedure funA (n: integer; x: float) return integer  --function declaration
+declare
+  localA := 3;
+  localB : float;
+  localC : string;
+
+begin
+  for (x in 3 .. 7) loop	-- single statment for loop + scoping
+	while (localA => 2) loop	-- block while loop + operator testing
+    begin
+      localC := b;
+      localB := localA;
+      e[1] := 1;		
+      e[0] := e[1] + a;
+      e[0] := localB - a;	--inplicit type convertion
+	d  := e[0] + e[1];	
+      e[0] := e[1] * d;		--type convertion
+      e[0] := true / (a + d);	
+      c := e[0] > e[1];
+    end;
+	end loop;
+  end loop;
+
+  return e[0];
+end;
+end funA;
+
+procedure funB
+begin
+	read a;
+	read localA;
+	;
+end;
+end funB;
+
+-- main program 
+begin
+  print "testing print with ()";
+  println "testing println without ()";
+  if ( c ) then				--if () then block else single statment
+     declare
+	localA;
+     begin
+        funA (localA);
+	a := funA (3, 7.5);
+	funB;
+     end;
+  else
+     e[0] := 7 + 6 * 5 / ( 4 + 3 ) * -1;			--precedence testing
+  end if;
+  println (tesst);
+end
+end test

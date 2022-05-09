@@ -1,0 +1,20 @@
+--project1.l update---
+
+1) 修正印出錯誤時無法正確顯示行數的問題
+
+--project2.y update---
+
+1) 加入根據要被scan的檔名建立對應jasm檔案的功能，以利後續assembler生成
+
+2) 減少印出的東西，只保留enterscope和leavescope時symbol table的提示，以及錯誤訊息的印出
+
+3) 在適當位置加入"在建立的jasm檔案中寫入對應java assembler指令"的動作，以生成jasm檔案
+
+4) 加入counter用於紀錄boolean_expression所使用的label數量
+
+5) 加入一堆疊結構，用於處理巢狀迴圈或if的label
+
+6) 修改symbol架構，加入"是否為全域變(常)數"以及"index"兩變數，用於生成正確的指令
+
+7) 修正ELSE沒有正確進入scope的問題
+
