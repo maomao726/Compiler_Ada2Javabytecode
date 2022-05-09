@@ -1,0 +1,8 @@
+Lex scanner修改內容：
+
+1. 將自定義的main function刪除，避免重複定義main function
+2. 刪除「印出讀取到的token」功能，保持運行時的簡潔
+3. 讀到token後從「印出」改為「return token」，以便yacc parser運行
+4. 從yacc extern了yylval，在讀到值時可以賦值以利parser運行
+5. 保留了「逐行印出」的功能，方便在debug時檢查
+6. 新增保留字 "read"
